@@ -47,7 +47,7 @@ def get_cpu_temp():
 get_file_contents()
 
 # Get the file contents
-def get_file_contents():
+def get_file_contents(self):
     readFile = open("Task B/config.json", "r")
     contents = readFile.read()
 
@@ -55,6 +55,8 @@ def get_file_contents():
 
     for key, value in data.items():
         print(key, value)
+        self.value = value
+        
 
 def get_current_temp():
     # Get SenseHat temperature
